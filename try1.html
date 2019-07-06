@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>Rentomojo Assignment</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+<script language="javascript">
+function addone(field) {
+field.value = Number(field.value) + 1;
+}
+
+function subtractone(field) {
+field.value = Number(field.value) + 1;
+}
+</script>
+<style>
+.button8 {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 3px 2px;
+  cursor: pointer;
+}
+
+.button6 {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 9px;
+  margin: 3px 2px;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: blue; 
+  border: 3px solid #008CBA;
+}
+.button2 {
+  background-color: white;
+  color: black;
+  border: 3px solid #555555;
+}
+
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+</style>
+</head>
+<body>
+
+<br>
+<textarea rows="6" cols="190" name="comment" placeholder="Enter your comment..." form="usrform">
+</textarea>
+<br>
+<div align="right">
+<button class="button" style="vertical-align:middle"><span>Post Comment</span></button>
+</div>
+
+<br><br>
+<form name="myform">
+
+<!--input type="submit" onclick="this.disabled = true" value="Save" -->
+<input type="text" name="myfield" value="0" size="1" readonly="readonly">
+<input type="button" class="button8 button1" value="Like" onclick="addone(myfield);" onclick="this.disabled = true"> 
+
+<br><br>
+
+<!--input type="submit" onclick="this.disabled = true" value="Save" -->
+<input type="text" name="mfield" value="0" size="1" readonly="readonly">
+<input type="button" class="button6 button2" value="dislike" onclick="subtractone(mfield);"><br>
+
+</form>
+
+</body>
+</html>
